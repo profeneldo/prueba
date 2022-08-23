@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: $colorSecundario !important;
+    outline: none;
+    text-decoration: none;
+    background-image: linear-gradient(#E0C8AE, #935A46);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+
+    &:hover, &:focus {
+    background-size: 100% 4px;
+    }
+}
+
+body{
+    background-color: #F0D5B8;
+    position: relative;
+    padding-bottom: 3em;
+}
+#tituloPagina{
+    font-family: $fuente-titulo;
+    font-size: map-get($map: $fontSize, $key: 'grande' );
+    color: $colorPrimario;
+    text-align: center;
+}
+
+#subtituloChico{
+    font-family: $fuente-subtitulo;
+    font-size: map-get($map: $fontSize, $key: 'chico' );
+    color: $colorSecundario;
+    text-align: center;
+    padding: 0.5em;
+}
+#subtituloGrande{
+    font-family: $fuente-subtitulo;
+    font-size: map-get($map: $fontSize, $key: 'mediano' );
+    color: $colorPrimario;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 20px;
+}
+#misionTitulo{
+    font-family:$fuente-subtitulo;
+    font-size: 30px;
+    margin-top: 1em;
+    text-align: center;
+}
+.info {
+    padding: 0.5em;
+    margin-top: 5px;
+    font-family: $fuente-info;
+    color: black;
+    text-align: left;
+    font-size: map-get($map: $fontSize, $key: 'x-small' )
+}
+.fotoCafe img{
+    margin: auto;
+    display: block;
+    width: 400px;
+    height: 500x;
+}
+.recetaTexto{
+    font-family: $fuente-subtitulo;
+    font-size: map-get($map: $fontSize, $key: 'link' );
+    margin-top: 0.5em;
+}
+.lista_receta {
+	ul {
+		li {
+			margin-top: 20px;
+			color: $colorSecundario;
+			font-family: $fuente-info;
+			font-size: map-get($map: $fontSize, $key: 'link');
+			display: block;
+			text-align: center;
+		}
+	}
+}
+
+.tituloReceta{
+    @extend #tituloPagina;
+}
+.subtituloReceta{
+    @extend #subtituloChico;
+}
+.finalReceta{
+    @extend #subtituloChico;
+}
+.tituloRegion{
+    @extend #tituloPagina;
+    padding: 0.5em
+}
+.infoRegion {
+    @extend .info;
+    font-size: map-get($map: $fontSize, $key: 'link' );
+    padding: 1,5em;
+}
+
+
+// .carousel-inner{
+//     margin-top: 2em;
+//     width: 1000px;
+// }
+.linkReceta{
+    @extend a;
+    font-size: map-get($map: $fontSize, $key: 'link') ;
+    font-family: $fuente-form;
+}
+@media screen and (max-width: 1024px) {
+	nav {
+		ul {
+			flex-direction: column;
+            align-content: center;
+		}
+	}
+	ul {
+		li {
+			margin: auto;
+			margin-bottom: 1em;
+		}
+	}
+    a{
+        font-size: map-get($map: $fontSize, $key: 'chico' );
+    }
+}

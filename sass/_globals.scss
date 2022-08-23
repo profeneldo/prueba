@@ -1,0 +1,30 @@
+/* Normalize */
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family:  $font-principal;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: $font-title;
+    color: $text-color;
+}
+
+img {
+    width: 100%;
+}
